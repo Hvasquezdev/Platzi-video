@@ -83,3 +83,49 @@ th {
   padding: 0;
   text-align: left
 }
+
+.Grid-container {
+  font-family: system-ui;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 0;
+  
+  display: grid;
+  
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media (min-width: 320px) {
+  .Grid-container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .Grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .Grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,17 +1,3 @@
-.Media-container {
-  font-family: system-ui;
-  width: 90%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 20px 0;
-  
-  display: grid;
-  
-  grid-template-columns: repeat(4, minmax(260px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 20px;
-}
-
 .card {
   background: white;
   text-decoration: none;
@@ -68,37 +54,4 @@
   padding-bottom: 60%;
   background-size: cover;
   background-position: center center;
-}
-
-
-@media (min-width: 320px) {
-  .Media-container {
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-  }
-}
-
-@media (min-width: 480px) {
-  .Media-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .Media-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .Media-container {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .Media-container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
