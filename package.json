@@ -1,16 +1,14 @@
 {
-  "name": "react-webpack-babel",
+  "name": "platzi-video",
   "version": "1.0.0",
-  "description": "Set up of React - Webpack 4 and Babel 7",
+  "description": "Platzi Video App made following the React.Js course in Platzi",
   "main": "./src/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
   "keywords": [
-    "react",
-    "webpack-4",
-    "babel-7"
+    "react"
   ],
   "author": "HectorVasquez",
   "license": "MIT",
