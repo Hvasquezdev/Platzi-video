@@ -1,0 +1,104 @@
+.Media-container {
+  font-family: system-ui;
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px 0;
+  
+  display: grid;
+  
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  position: relative;
+  top: 0;
+  transition: all .2s;
+}
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.card article {
+  padding: 20px;
+  flex: 1;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  flex: 1;
+  line-height: 1.4;
+  font-size: 1em;
+  margin-top: .5em;
+  color: #999;
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin: 1em 0 0 0;
+}
+
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+@media (min-width: 320px) {
+  .Media-container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .Media-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .Media-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Media-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .Media-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
