@@ -4,19 +4,17 @@ import './index.css';
 
 class MediaComponent extends React.Component {
   handleClick = (e) => {
-    console.log('hola')
   }
 
   render() {
     const cardImage = {
-      backgroundImage: `url(${this.props.img})`
+      backgroundImage: `url(${require('../../../../' + this.props.cover)})`
     }
     return(
-      <a href="#" className="card" onClick={this.handleClick}>
+      <a href={this.props.src} className="card" onClick={this.handleClick} target="_blank">
         <div className="thumb" style={ cardImage }></div>
         <article>
-          <h2>{ this.props.title }</h2>
-          <p>{ this.props.description }</p>
+          <h3>{ this.props.title }</h3>
           <span>{ this.props.author }</span>
         </article>
       </a>
@@ -25,10 +23,11 @@ class MediaComponent extends React.Component {
 }
 
 MediaComponent.propTypes = {
-  img: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  author: PropTypes.string
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['video', 'audio']).isRequired
 };
 
 export default MediaComponent;
