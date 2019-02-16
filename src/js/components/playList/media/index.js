@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import './index.css';
 
-class MediaComponent extends React.Component {
+class MediaComponent extends PureComponent {
   handleClick = (e) => {
   }
 
