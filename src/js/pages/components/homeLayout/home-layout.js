@@ -1,8 +1,9 @@
 import React from 'react';
+import './index.css';
 
 function HomeLayout (props) {
   return(
-    <div>
+    <div className="Home-container">
       { props.children }
     </div>
   );

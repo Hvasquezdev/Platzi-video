@@ -10,7 +10,10 @@ function Category (props) {
         <h2>{ props.title }</h2>
         <p>{ props.description }</p>
       </div>
-      <Playlist data={props.playlist} />
+      <Playlist 
+        data={props.playlist} 
+        toggleModal={props.toggleModal}  
+      />
     </div>
   );
 }

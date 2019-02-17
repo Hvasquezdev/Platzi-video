@@ -14,6 +14,7 @@ function Playlist (props) {
             <MediaComponent 
               key={item.id}
               {...item}
+              toggleModal={props.toggleModal}
             />
           );
         })       

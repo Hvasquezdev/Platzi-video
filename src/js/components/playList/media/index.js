@@ -8,13 +8,13 @@ class MediaComponent extends PureComponent {
       backgroundImage: `url(${require('../../../../' + this.props.cover)})`
     }
     return(
-      <a href={this.props.src} className="card" target="_blank">
+      <div className="card" target="_blank" onClick={this.props.toggleModal}>
         <div className="thumb" style={ cardImage }></div>
         <article>
           <h3>{ this.props.title }</h3>
           <span>{ this.props.author }</span>
         </article>
-      </a>
+      </div>
     );
   }
 }

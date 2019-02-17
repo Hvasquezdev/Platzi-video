@@ -8,6 +8,7 @@
   min-height: 100%;
   border-radius: 4px;
   overflow: hidden;
+  cursor: pointer;
   
   position: relative;
   top: 0;

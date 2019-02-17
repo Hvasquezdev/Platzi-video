@@ -12,5 +12,5 @@ function App() {
 }
 
 const Element = <App />;
-const RootElement = document.getElementById("root");
+const RootElement = document.querySelector('#Home-container');
 RootElement ? ReactDOM.render(Element, RootElement) : false;
