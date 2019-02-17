@@ -3,14 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 // Components
-import Playlist from './js/components/playList/playlist';
-
-// Api Data
-import data from './api.json';
+import Home from './js/pages/containers/home';
 
 function App() {
   return(
-    <Playlist data={data} />
+    <Home />
   );
 }
 
