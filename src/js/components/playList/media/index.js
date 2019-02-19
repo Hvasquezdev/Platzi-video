@@ -3,12 +3,19 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 class MediaComponent extends PureComponent {
+  handleClick = () => {
+    this.props.toggleModal(this.props)
+  }
+
   render() {
     const cardImage = {
       backgroundImage: `url(${require('../../../../' + this.props.cover)})`
     }
     return(
-      <div className="card" target="_blank" onClick={this.props.toggleModal}>
+      <div 
+        className="card" 
+        onClick={this.handleClick}
+      >
         <div className="thumb" style={ cardImage }></div>
         <article>
           <h3>{ this.props.title }</h3>

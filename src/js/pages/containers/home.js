@@ -7,18 +7,21 @@ import Related from '../components/related/related';
 import ModalContainer from '../../widgets/containers/modal';
 import Modal from '../../widgets/components/modal/index';
 import ErrorContainer from './error';
+import VideoPlayer from '../../components/player/videoPlayer/index';
 
 // Api Data
 import data from '../../../api.json';
 
 class Home extends Component {
   state = {
-    modalVisible: false
+    modalVisible: false,
+    modalData: {}
   }
 
-  toggleModal = (e) => {
+  toggleModal = (data) => {
     this.setState({
-      modalVisible: !this.state.modalVisible
+      modalVisible: !this.state.modalVisible,
+      modalData: data
     });
   }
 
@@ -34,10 +37,13 @@ class Home extends Component {
           { 
             this.state.modalVisible &&
             <ModalContainer>
-              <Modal toggleModal={this.toggleModal}>
-                <h1>
-                  React Create Portal
-                </h1>
+              <Modal 
+                toggleModal={this.toggleModal}
+              >
+                <VideoPlayer 
+                  autoplay
+                  modalData={this.state.modalData}
+                />
               </Modal>
             </ModalContainer>
           }

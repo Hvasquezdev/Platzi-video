@@ -1,0 +1,23 @@
+.ProgressBar{
+	display: flex;
+	align-items: center;
+}
+.ProgressBar input{
+	width: 450px;
+}
+
+@media screen and (max-width: 760px) {
+  .ProgressBar input {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProgressBar input {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ProgressBar input {
+    width: 150px;
+  }
+}
